@@ -1,0 +1,33 @@
+{
+  "name": "restql",
+  "version": "0.1.0",
+  "description": "A restQL client for JS",
+  "main": "./dist/restql.js",
+  "repository": "https://github.com/thulio/restQL-js",
+  "author": "Thúlio Costa <contact@thul.io>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "jest": "^20.0.4",
+    "jest-cli": "^20.0.4",
+    "webpack": "^2.6.1"
+  },
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "promise-polyfill": "^6.0.2"
+  },
+  "scripts": {
+    "build": "webpack",
+    "build:browser": "webpack && cp ./dist/restql.js examples/browser",
+    "build:server": "webpack && cp ./dist/restql.js examples/server",
+    "test": "jest"
+  },
+  "jest": {
+    "browser": true,
+    "bail": true,
+    "collectCoverage": true,
+    "coverageDirectory": "./coverage/"
+  }
+}
